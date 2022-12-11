@@ -1,0 +1,13 @@
+package ua.mk.essur.practicetask;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PracticeTaskApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(PracticeTaskApplication.class, args);
+    }
+
+}
