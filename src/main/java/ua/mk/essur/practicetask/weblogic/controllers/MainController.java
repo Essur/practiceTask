@@ -12,11 +12,14 @@ import java.util.List;
 
 @Controller
 public class MainController {
-    private RepositoryService repositoryService;
+    @Autowired
+    private ManagerRepository managerRepository;
+
+    /*private RepositoryService repositoryService;
 
     public MainController(RepositoryService repositoryService) {
         this.repositoryService = repositoryService;
-    }
+    }*/
 
     @GetMapping("")
     public String mainPage(){
@@ -25,7 +28,7 @@ public class MainController {
 
     @GetMapping("/managers")
     public String managersPage(Model model){
-        List<Manager> managers = repositoryService.getManagerRepository().findAll();
+        List<Manager> managers = managerRepository.findAll();
         model.addAttribute("managers",managers);
         return "views/managers";
     }
