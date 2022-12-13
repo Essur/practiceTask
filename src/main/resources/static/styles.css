@@ -4,6 +4,7 @@
     color: #F2D1C9;
     font-family: 'Montserrat', sans-serif;
 }
+
 .main_block{
     text-align: center;
     margin-left: auto;
@@ -14,6 +15,35 @@
     color: #F2D1C9;
 }
 
+/*for pages with tables*/
+.wrapper{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    height: 1200px;
+    font-family: 'Montserrat', sans-serif;
+    color: #F2D1C9;
+}
+
+table{
+    color: #F2D1C9;
+    width: 1200px;
+    margin: auto;
+}
+th{
+    background-color: #847996;
+    color: #333;
+}
+td{
+    color: #F2D1C9;
+}
+.database_table{
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+/*head menu*/
 .menu-main {
     list-style: none;
     margin: 5px 0 5px;
