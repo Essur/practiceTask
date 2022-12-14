@@ -1,14 +1,12 @@
 package ua.mk.essur.practicetask.weblogic.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "driver")
 public class Driver {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "driverId", nullable = false)
     private Integer id;
 

@@ -24,8 +24,8 @@
       <tr>
         <th>#</th>
         <th>ПІБ</th>
-        <th>Номер телефону</th>
         <th>Компанія</th>
+        <th>Номер телефону</th>
         <th>Видалити</th>
       </tr>
       </thead>
@@ -33,28 +33,34 @@
       <tr th:each="m : ${managers}">
         <td th:text="${m.id}"></td>
         <td th:text="${m.fullName}"></td>
-        <td th:text="${m.phoneNumber}"></td>
         <td th:text="${m.company}"></td>
+        <td th:text="${m.phoneNumber}"></td>
         <td><a th:href="@{/managers/{id}(id=${m.id})}" class="button_table">×</a></td>
       </tr>
       </tbody>
     </table>
-      <div class="enter_div">
-        <h1>Додати керівника</h1>
-        <form action="managers/add_manger" method="post" class="enter_form">
+  </div>
+  <div class="enter_div">
+      <h1>Додати керівника</h1>
+      <form action="managers/add_manager" method="post" class="enter_form">
+        <div class="field">
           <label for="manager_name">ПІБ керівника: </label>
           <input type="text" name="managerName" id="manager_name">
           <br>
+        </div>
+        <div class="field">
           <label for="manager_company">Назва компанії:</label>
           <input type="text" name="managerCompany" id="manager_company">
           <br>
+        </div>
+        <div class="field">
           <label for="manager_phone_number">Номер телефону керівника:</label>
           <input type="text" name="managerPhoneNumber" id="manager_phone_number">
           <br>
-          <input type="submit" value="Add">
-        </form>
-        <a href="/index" class="nav_button">To main menu</a>
-      </div>
-  </div>
+        <input type="submit" value="Add">
+        </div>
+      </form>
+      <a href="/index" class="nav_button">На головну сторінку</a>
+    </div>
 </body>
 </html>

@@ -9,24 +9,39 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    height: 1200px;
+    height: auto;
     width: 700px;
     font-family: 'Montserrat', sans-serif;
     color: #F2D1C9;
 }
+
+
 .enter_div{
-    margin-top: 100px;
+    margin-top: 10px;
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 700px;
+    color: #F2D1C9;
 }
 
 /* Forms style */
-.enter_form{
+.field{
     color: #F2D1C9;
+    clear:both; 
+    text-align:right; 
+    line-height:25px;
+}
+.field label{
+    float:left; 
+    padding-right:10px;
 }
 input[type=button], input[type=submit], input[type=reset] {
     background-color:#847996;
     border: none;
-    color: #333;
+    color: #F2D1C9;
     padding: 5px 5px;
     text-decoration: none;
     margin: 4px 2px;
@@ -70,7 +85,7 @@ input[type=button], input[type=submit], input[type=reset] {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
-    height: 1200px;
+    height: auto;
     font-family: 'Montserrat', sans-serif;
     color: #F2D1C9;
 }
