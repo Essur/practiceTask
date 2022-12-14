@@ -14,6 +14,55 @@
     font-family: 'Montserrat', sans-serif;
     color: #F2D1C9;
 }
+.enter_div{
+    margin-top: 100px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Forms style */
+.enter_form{
+    color: #F2D1C9;
+}
+input[type=button], input[type=submit], input[type=reset] {
+    background-color:#847996;
+    border: none;
+    color: #333;
+    padding: 5px 5px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/* Button in table */
+.button_table{
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px 5px;
+    color: #F2D1C9;
+    text-decoration: none;
+    transition: background .1s linear, color .1s linear;
+}
+.button_table:hover{
+    background-color: #847996;
+    color: #333;
+}
+
+/* Navigation button */
+.nav_button{
+    margin-top: 15px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 20px;
+    border: 3px solid #847996;
+    padding: 10px 15px;
+    color: #F2D1C9;
+    text-decoration: none;
+    transition: background .1s linear, color .1s linear;
+}
+.nav_button:hover{
+    background-color: #847996;
+    color: #333;
+}
 
 /*for pages with tables*/
 .wrapper{

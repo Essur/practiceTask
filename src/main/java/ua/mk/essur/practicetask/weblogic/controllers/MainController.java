@@ -13,7 +13,7 @@ import java.util.List;
 public class MainController {
 
 
-    @GetMapping("")
+    @GetMapping({"","/index"})
     public String mainPage(){
         return "index";
     }
