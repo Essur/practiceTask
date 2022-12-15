@@ -25,6 +25,7 @@ public class ManagerController {
         model.addAttribute("managers",managers);
         return "views/managers";
     }
+
     @GetMapping("/managers/{id}")
     public String deleteManger(@PathVariable("id") long id) {
         managerRepository.deleteById(id);

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Managers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1 class="head_text">Громадський транспорт міста Миколаїв</h1>
+  <ul class="menu-main">
+    <li><a href="/managers">Керівники</a></li>
+    <li><a href="">Диспетчер</a></li>
+    <li><a href="/drivers">Водії</a></li>
+    <li><a href="">Пасажири</a></li>
+  </ul>
+
+  <div class="wrapper">
+    <h1>Водії</h1>
+    <table class="database_table">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>ПІБ</th>
+        <th>Компанія</th>
+        <th>Назва авто</th>
+        <th>Номер авто</th>
+        <th>Номер водійського посвідчення</th>
+        <th>Видалити</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="d : ${drivers}">
+        <td th:text="${d.id}"></td>
+        <td th:text="${d.driverFullName}"></td>
+        <td th:text="${d.company}"></td>
+        <td th:text="${d.carName}"></td>
+        <td th:text="${d.carNumber}"></td>
+        <td th:text="${d.numberOfDriverDocuments}"></td>
+        <td><a th:href="@{/drivers/{id}(id=${d.id})}" class="button_table">×</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="enter_div">
+      <h1>Додати водія</h1>
+      <form action="drivers/add_driver" method="post" class="enter_form">
+        <div class="field">
+          <label for="driver_name">ПІБ водія: </label>
+          <input type="text" name="driverName" id="driver_name">
+          <br>
+        </div>
+        <div class="field">
+          <label for="driver_company">Назва компанії:</label>
+          <input type="text" name="driverCompany" id="driver_company">
+          <br>
+        </div>
+        <div class="field">
+          <label for="car_name">Назва автомобіля:</label>
+          <input type="text" name="carName" id="car_name">
+          <br>
+        </div>
+        <div class="field">
+          <label for="car_number">Номер авто:</label>
+          <input type="text" name="carNumber" id="car_number">
+          <br>
+        </div>
+        <div class="field">
+          <label for="number_of_driver_doc">Номер водійського посвідчення:</label>
+          <input type="text" name="numberOfDriverDocuments" id="number_of_driver_doc">
+          <br>
+        </div>
+        <input type="submit" value="Add">
+      </form>
+      <a href="/index" class="nav_button">На головну сторінку</a>
+    </div>
+</body>
+</html>
