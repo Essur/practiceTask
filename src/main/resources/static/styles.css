@@ -121,6 +121,9 @@ td{
     display: inline-block;
     vertical-align:top;
 }
+.menu-main li a:hover{
+    color:#feb386;
+}
 .menu-main li:last-child:after {content: none;}
 .menu-main a {
     text-decoration: none;
